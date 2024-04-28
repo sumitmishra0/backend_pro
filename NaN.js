@@ -16,10 +16,10 @@ console.log(Number.isNaN(x));
 
 // But if you ask to don't use any inbuilt function then use the below method
 
-if(typeof(x) == 'number' && x !== x){
+if(typeof(x) == 'number' && x !== x){     // NaN is the only number value that's not equal to itself
    console.log('true');
 }
 
 
 // isNaN() function does coercion and converts the inputs to number
-// Number.isNaN() function doesn't do coercion 
+// Number.isNaN() function doesn't do coercion and you can avoid coercion
