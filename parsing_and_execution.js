@@ -40,7 +40,17 @@ console.log(content);
 // 
 
 
+// Execution phase
+
 // Now let discuss about the content ( content = "JS" ) how it will execute 
-// 
+// content = "js" used in function fun so when the parsing of the code is going on it will go to function fun and we define a variable teacher and now move to next line and we ignore content = "js" because we are not creating a variable content we are just assigning value to it.
+// so now move out from function fun and same is going on in function gun.
+// WHEN parsing phase is done, and executing phase is begin, we check , Hey scope manager do you have variable teacher in global scope . Answer is yes so it will assign the "Sanket" to teacher, now we move to line where we are calling function fun()
+// Again we ask to Scope manager , do you have formal declaration of fun, answer is yes , so we will call fun(), Now we see a variable teacher so we ask to Scope Manager do you have a variable teacher in scope of fun, answer is yes.
+// so we assign the "Pulkit" to teacher . Now we see content = "js" so we ask to scope manager  do you have variable content in scope of fun , answer is no, so we go one scope out, so you are in global scope, then again ask do you have variable content in globsl scope, answer is no.
+// so neither we found the content in scope of fun nor we found the content in global scope, (we did this finding, finding can be done when two places, one is when value are allocating to you then you are finding content or when you are using the value then you find teacher).
+// so any variable can be used at two places only, when its gets the value or when value is used, so when you are trying to assign a value to content, and you didn't find it in function scope and inside global scope. so there is a concept of autoglobals.
+// so this content during execution phase will become global variable, and inside the global scope it gets value "js". so rest of the execution is also going in a similar way.
+
 
 
